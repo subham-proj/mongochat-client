@@ -24,8 +24,8 @@ const ChatWindow = () => {
   }, [messages]);
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Content style={{ padding: "20px", backgroundColor: "#f0f2f5" }}>
+    <Layout className="chat-window-layout">
+      <Content>
         <div className="chat-container">
           {/* Message List */}
           <div ref={messageListRef} className="message-list">

@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import ChatWindow from "../components/ChatWindow";
+import data from "../../dummyData.json";
+import emptyData from "../../emptyData.json";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { solarizedDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function Chat() {
   return (
@@ -14,8 +18,11 @@ export default function Chat() {
 
         {/* Right Column */}
         <div className="right-column">
-          <h2>Right Column</h2>
-          <p>This is the content of the right column.</p>
+          <div className="json-container">
+            <SyntaxHighlighter language="json" style={solarizedDark}>
+              {JSON.stringify(data, null, 2)}{" "}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </>

@@ -59,20 +59,29 @@
 /* Home page styling starts */
 .two-column-container {
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .left-column {
   flex: 1;
-  background-color: #f0f2f5;
-  padding: 20px;
+  padding: 10px;
 }
 
 .right-column {
-  flex: 1;
-  background-color: #ffffff;
-  padding: 20px;
+  flex: 1.5;
+  padding: 10px;
+}
+
+.json-container {
+  min-height: 550px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: #012b36;
+  height: 80vh;
+  box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.028),
+    0px 0px 5.3px rgba(0, 0, 0, 0.04), 0px 0px 10px rgba(0, 0, 0, 0.05),
+    0px 0px 17.9px rgba(0, 0, 0, 0.06), 0px 0px 33.4px rgba(0, 0, 0, 0.072),
+    0px 0px 80px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -91,12 +100,18 @@
 
 /* Chat styling starts */
 
+.chat-window-layout {
+  background-color: #ffffff;
+}
+
 .chat-container {
-  max-width: 600px;
-  margin: auto;
+  max-width: 100%;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.028),
+    0px 0px 5.3px rgba(0, 0, 0, 0.04), 0px 0px 10px rgba(0, 0, 0, 0.05),
+    0px 0px 17.9px rgba(0, 0, 0, 0.06), 0px 0px 33.4px rgba(0, 0, 0, 0.072),
+    0px 0px 80px rgba(0, 0, 0, 0.1);
   padding: 20px;
   height: 80vh;
   display: flex;
