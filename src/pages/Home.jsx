@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import axios from "axios";
 import { Button, Form, Input, message, Spin } from "antd";
@@ -8,8 +8,15 @@ import { useNavigate } from "react-router-dom";
 const BASE_URL = import.meta.env.VITE_API_URL;
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/chat");
+    }
+  }, []);
+
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async (values) => {
     const { url } = values;
     setLoading(true);
@@ -26,7 +33,7 @@ export default function Home() {
 
       message.success("Connected successfully!");
       localStorage.setItem("token", response.data.token);
-      navigate("/chat/abc"); //TODO: need to handle dynamic chat id
+      navigate("/chat"); //TODO: need to handle dynamic chat id
     } catch (error) {
       message.error(error.response.data.message);
     }

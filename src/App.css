@@ -1,3 +1,4 @@
+/* Common styling starts */
 .center-container {
   display: flex;
   justify-content: center;
@@ -32,3 +33,110 @@
   background: rgba(255, 255, 255, 0.5);
   z-index: 100;
 }
+
+/* Common styling ends */
+
+/* Navbar styling starts */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.brand-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar styling ends */
+
+/* Home page styling starts */
+.two-column-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-column {
+  flex: 1;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.right-column {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .two-column-container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Home page styling ends */
+
+/* Chat styling starts */
+
+.chat-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message-list {
+  max-height: 500px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.message-box {
+  margin-left: 10px;
+}
+
+.message-content {
+  background-color: #d4f6ff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-field {
+  flex: 1;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.send-button {
+  border-radius: 20px;
+}
+
+/* Chat styling ends */
